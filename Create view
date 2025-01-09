@@ -1,0 +1,13 @@
+
+QUERY EXAMPLE:
+CREATE VIEW unique_films AS
+
+SELECT title,
+ release_year,
+ language_id,
+ rental_duration
+FROM film
+GROUP BY title,
+ release_year,
+ language_id,
+ rental_duration
