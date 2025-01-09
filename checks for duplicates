@@ -1,0 +1,23 @@
+ Output Explanation:
+PURPOSE:
+This query groups rows in the customer table by all its columns.
+It checks for duplicate rows where all specified fields have identical values.
+
+SELECT *, -- select every record
+ COUNT(*)-- counts every record
+FROM film
+GROUP BY -- returns every collumn
+ film_id,
+title,
+description,
+release_year,
+language_id,
+rental_duration,
+rental_rate,
+length,
+replacement_cost,
+rating,
+last_update,
+special_features
+HAVING COUNT(*) > 1 -- shows records
+greaters that appears more than once
